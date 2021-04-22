@@ -159,8 +159,8 @@ public class FileSelector extends Plugin {
          * So we need to make some corrections here for the fetch API on the web layer to be able to fetch a blob from this file
          * https://github.com/ionic-team/capacitor/blob/cdd317f82828c319e4249716a5fa4a9e6bdf6201/android/capacitor/src/main/java/com/getcapacitor/plugin/Camera.java
          */
-        String fileInfo[] = new String[3];
-        String modifiedPath = "_capacitor_file_" + file.getPath();
+        String[] fileInfo = new String[5];
+        String modifiedPath = file.getPath();//"_capacitor_file_" + file.getPath();
         fileInfo[0] = modifiedPath;
         Log.i("capacitor",fileInfo[0]);
         fileInfo[1] = name.substring(0,name.indexOf('.'));
